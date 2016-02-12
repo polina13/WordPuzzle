@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="WordPuzzleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-02-12T23:15:16" hostname="Alexs-MacBook-Pro.local" time="0.004">
+<testsuite name="WordPuzzleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-02-12T23:31:34" hostname="Alexs-MacBook-Pro.local" time="0.0">
   <properties/>
-  <testcase name="checkPuzzle_checkForWordsWithVowelsAndReplaceVowelsWithDashes" classname="WordPuzzleTest" time="0.003"/>
+  <testcase name="checkPuzzle_checkForWordsWithVowelsAndReplaceVowelsWithDashes" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="checkPuzzle_checkForWordsWithNoVowels" classname="WordPuzzleTest" time="0.0"/>
   <testcase name="checkPuzzle_checkForSentenceWithVowelsAndReplaceVowelsWithDashes" classname="WordPuzzleTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
