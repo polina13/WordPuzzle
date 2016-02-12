@@ -7,31 +7,33 @@ import static spark.Spark.*;
 
 public class WordPuzzle {
   public static void main(String[] args) {
-    // staticFileLocation("/public");
+    staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
-    //
-    // get("/", (request, response) -> {
-    //   Map<String, Object> model = new HashMap<String, Object>();
-    //   model.put("template", "templates/main.vtl");
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
-    //
-    // get("/detector", (request, response) -> {
-    //   Map<String, Object> model = new HashMap<String, Object>();
-    //   model.put("template", "templates/detector.vtl");
-    //   String userStringNumber = request.queryParams("number");
-    //   Integer userNumber = Integer.parseInt(userStringNumber);
-    //   ArrayList<Object> results = new ArrayList<Object>();
-    //   results = PingPong.isPingPong(userNumber);
-    //
-    //   model.put("results", results);
-    //   return new ModelAndView(model, layout);
-    // }, new VelocityTemplateEngine());
+    get("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/main.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/detector", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      String userString = request.queryParams("word");
+      String noVowelString = WordPuzzle.checkWord(userString);
+
+      model.put("userString", userString);
+      // model.put("noVowelString", noVowelString);
+      // model.put("template", "templates/detector.vtl");
+
+      Object results = WordPuzzle.checkWord(userString);
+      model.put("results", results);
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
   }
 
-  public static String checkWord(String userStringInput) {
-    return userStringInput.replaceAll("[aeiouy]", "-");
+  public static String checkWord(String word) {
+
+    return word.replaceAll("[aeiouyAEIOUY]", "-");
 
   }
 

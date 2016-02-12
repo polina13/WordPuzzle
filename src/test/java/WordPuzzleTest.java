@@ -12,8 +12,14 @@ public class WordPuzzleTest {
   }
 
   @Test
-  public void checkPuzzle_checkForWordsWithVowelsandReplaceVowelsWithDashes() {
+  public void checkPuzzle_checkForWordsWithVowelsAndReplaceVowelsWithDashes() {
     WordPuzzle testWordPuzzle = new WordPuzzle();
     assertEquals("H-ll-fr--nds", testWordPuzzle.checkWord("Hellofriends"));
+  }
+
+  @Test
+  public void checkPuzzle_checkForSentenceWithVowelsAndReplaceVowelsWithDashes() {
+    WordPuzzle testWordPuzzle = new WordPuzzle();
+    assertEquals("Pr-gr-mm-ng -s f-n b-t v-r- h-rd.", testWordPuzzle.checkWord("Programming is fun but very hard."));
   }
 }
