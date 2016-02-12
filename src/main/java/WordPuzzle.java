@@ -22,8 +22,8 @@ public class WordPuzzle {
       String noVowelString = WordPuzzle.checkWord(userString);
 
       model.put("userString", userString);
-      // model.put("noVowelString", noVowelString);
-      // model.put("template", "templates/detector.vtl");
+      model.put("noVowelString", noVowelString);
+      model.put("template", "templates/detector.vtl");
 
       Object results = WordPuzzle.checkWord(userString);
       model.put("results", results);
@@ -32,9 +32,7 @@ public class WordPuzzle {
   }
 
   public static String checkWord(String word) {
-
     return word.replaceAll("[aeiouyAEIOUY]", "-");
 
   }
-
 }
