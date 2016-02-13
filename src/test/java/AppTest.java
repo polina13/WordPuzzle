@@ -24,6 +24,8 @@ public class AppTest extends FluentTest {
   @Test
   public void checkForAWord() {
     goTo("http://localhost:4567/");
+    fill("#word").with("cat");
+    submit(".btn");
     assertThat(pageSource()).contains("c-t");
   }
 }
