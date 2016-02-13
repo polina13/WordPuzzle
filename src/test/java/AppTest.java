@@ -28,4 +28,20 @@ public class AppTest extends FluentTest {
     submit(".btn");
     assertThat(pageSource()).contains("c-t");
   }
+
+  @Test
+  public void checkForAMultipleWords() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("hello epicodus");
+    submit(".btn");
+    assertThat(pageSource()).contains("h-ll- -p-c-d-s");
+  }
+
+  @Test
+  public void checkForASentenceWithPunctuation() {
+    goTo("http://localhost:4567/");
+    fill("#word").with("I like learning about programming!");
+    submit(".btn");
+    assertThat(pageSource()).contains("- l-k- l--rn-ng -b--t pr-gr-mm-ng!");
+  }
 }

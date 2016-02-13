@@ -1,17 +1,17 @@
 # Puzzle
 
-#### Creates a word puzzle from a sentence by removing vowels, February 12, 2016.
+#### Creates a word puzzle from a sentence by removing vowels, February 13, 2016.
 
 #### By Polina Nenchev
 
 ## Description
 
-This was created as an Epicodus exercise in Behavior Driven Development in Java 2nd Level Class. The web app is build using with Spark and Velocity, and solo programming.
+This was created for Epicodus Code Review in Behavior Driven Development in Java 2nd Level Class. The web app is build using with Spark and Velocity, and solo programming.
 
 ## Setup/Installation Requirements
 
 * Clone this repository.
-* Make sure you have Gradle and Java installed.
+* Make sure Gradle and Java have been installed appropriately.
 * In the top level of the cloned directory, run the following command in your terminal:
 
 `gradle run`
@@ -33,4 +33,4 @@ This was created as an Epicodus exercise in Behavior Driven Development in Java 
 
 This software is licensed under the MIT license.
 
-Copyright (c) 2016 Puzzle
+Copyright (c) 2016 Polina Nenchev
